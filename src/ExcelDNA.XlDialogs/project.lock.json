@@ -1,0 +1,108 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.0": {
+      "ExcelDna.Integration/0.33.9": {
+        "type": "package",
+        "compile": {
+          "lib/ExcelDna.Integration.dll": {}
+        },
+        "runtime": {
+          "lib/ExcelDna.Integration.dll": {}
+        }
+      },
+      "ExcelDna.Registration/0.33.9": {
+        "type": "package",
+        "dependencies": {
+          "ExcelDna.Integration": "[0.33.9, 0.34.0)"
+        },
+        "compile": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.0/win7-x86": {
+      "ExcelDna.Integration/0.33.9": {
+        "type": "package",
+        "compile": {
+          "lib/ExcelDna.Integration.dll": {}
+        },
+        "runtime": {
+          "lib/ExcelDna.Integration.dll": {}
+        }
+      },
+      "ExcelDna.Registration/0.33.9": {
+        "type": "package",
+        "dependencies": {
+          "ExcelDna.Integration": "[0.33.9, 0.34.0)"
+        },
+        "compile": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.0/win7-x64": {
+      "ExcelDna.Integration/0.33.9": {
+        "type": "package",
+        "compile": {
+          "lib/ExcelDna.Integration.dll": {}
+        },
+        "runtime": {
+          "lib/ExcelDna.Integration.dll": {}
+        }
+      },
+      "ExcelDna.Registration/0.33.9": {
+        "type": "package",
+        "dependencies": {
+          "ExcelDna.Integration": "[0.33.9, 0.34.0)"
+        },
+        "compile": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ExcelDna.Registration.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExcelDna.Integration/0.33.9": {
+      "type": "package",
+      "sha512": "81iZuo7ceprgK9tcTB6Io+w1plzJrxjWFoPxQW5H3vfQq+tlqZhZbq+s2F2qI5PFmT7FiW69vK/udkj0EB+Zbw==",
+      "files": [
+        "ExcelDna.Integration.0.33.9.nupkg.sha512",
+        "ExcelDna.Integration.nuspec",
+        "lib/ExcelDna.Integration.dll",
+        "tools/install.ps1"
+      ]
+    },
+    "ExcelDna.Registration/0.33.9": {
+      "type": "package",
+      "sha512": "JHubBlYyzQAyxpusXN6YiozY8PLBTxvjJsvz7bpBALLmzxyJjPeysF2D9fWm3sLF6YhbYCnNOKZ/n3yW623nDw==",
+      "files": [
+        "ExcelDna.Registration.0.33.9.nupkg.sha512",
+        "ExcelDna.Registration.nuspec",
+        "lib/net40/ExcelDna.Registration.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.0": [
+      "ExcelDna.Integration >= 0.33.9",
+      "ExcelDna.Registration >= 0.33.9",
+      "fx/Microsoft.CSharp ",
+      "fx/System ",
+      "fx/System.Core ",
+      "fx/System.Drawing ",
+      "fx/System.Data.Linq "
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0.1-*",
+  "authors": [
+    "zwq00000@gmail.com"
+  ],
+  "title": "ExcelDNA XlDialogBox Extensions",
+  "description": "XlDialogBox for ExcelDna",
+  "requireLicenseAcceptance": false,
+  "summary": "Extension ExcelDNA For XlDialogBox",
+
+  "compilationOptions": {
+    "define": [ "TRACE" ],
+    "platform": "anycpu",
+    "optimize": true
+  },
+
+  "compileExclude": ["Extensions\\Enums.cs"],
+  
+  "frameworks": {
+    "net40": {
+      "dependencies": {
+        "ExcelDna.Integration": "0.33.9",
+        "ExcelDna.Registration": "0.33.9"
+      },
+      "frameworkAssemblies": {
+        "Microsoft.CSharp": "",
+        "System": "",
+        "System.Core": "",
+        "System.Drawing": "",
+        "System.Data.Linq": ""
+      }
+    }
+  }
+}
