@@ -9,6 +9,7 @@ Wrapper xlfDialogBox C# Class
 
 ![image](./images/simple1.png)
 
+##Code
 ```C#
 new XlDialog(){ Width = 337,Height = 255,Text = "TestDialog"};
 var okBtn = new OkButton() { X = 169, Y = 220, Width = 75, Height = 23, Text = "确 定" };
@@ -21,6 +22,7 @@ var labelForAddress = new Label("单元格:") { X = 27, Y = 117, Width = 68, };
 var captionEdit = new TextBox() { X = 101, Y = 75, Width = 202 };
 var labelForCaption = new Label("标  题:") { X = 29, Y = 78, Width = 68, };
 var nameEdit = new DropdownList() { X = 101, Y = 37, Width = 202 };
+nameEdit.Items.AddRange(new string[]{"Item 1","Item 2","Item 3"})
 var labelForNames = new Label("名  称:") { X = 29, Y = 40, Width = 66, };
 
 dialog.Controls.Add(okBtn);
@@ -37,6 +39,15 @@ dialog.Controls.Add(labelForNames);
 
 dialog.ShowDialog();
 ```
+
+##Description
+TextBox/Label 等控件的高度是不需要指定的，Value 属性是对话框返回的值。
+对话框大小默认为 300x200.
+ComboBox/DropdownList 必须指定 Items，作为列表项。
+在 XlDialog.ShowDialog() 方法调用之前可以修改各个属性，对话框显示时根据控件定义自动构造内部的 *dialog_ref* 数组。
+
+*Picture button 和 Icons 还没有实现，不知道如何处理图片资源。*
+
 
 >Macro Sheets Only
 ###Displays the dialog box described in a dialog box definition table.
