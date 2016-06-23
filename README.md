@@ -11,7 +11,7 @@ Wrapper xlfDialogBox C# Class
 
 ##Code
 ```C#
-new XlDialog(){ Width = 337,Height = 255,Text = "TestDialog"};
+var dialog = new XlDialog(){ Width = 337,Height = 255,Text = "TestDialog"};
 var okBtn = new OkButton() { X = 169, Y = 220, Width = 75, Height = 23, Text = "确 定" };
 var cancelBtn = new CancelButton() { X = 250, Y = 220, Width = 75, Height = 23, Text = "取 消" };
 var groupBox = new GroupBox() { X = 12, Y = 12, Width = 312, Height = 183, Text = "定义单元格" };
