@@ -5,7 +5,38 @@ Wrapper xlfDialogBox C# Class
 在 Excel-DNA 中有这个方法的定义，XlCall.xlfDialog
 参数为一个 N*7的二维数组，来定义对话框的内容。
 
+##Example
 
+![image](./images/simple1.png)
+
+```C#
+new XlDialog(){ Width = 337,Height = 255,Text = "TestDialog"};
+var okBtn = new OkButton() { X = 169, Y = 220, Width = 75, Height = 23, Text = "确 定" };
+var cancelBtn = new CancelButton() { X = 250, Y = 220, Width = 75, Height = 23, Text = "取 消" };
+var groupBox = new GroupBox() { X = 12, Y = 12, Width = 312, Height = 183, Text = "定义单元格" };
+var valueEdit = new TextBox() { X = 101, Y = 153, Width = 202, Value = "" };
+var labelForValue = new Label("数  值:") { X = 27, Y = 156, Width = 68, };
+var addressEdit = new ReferenceEdit() { X = 101, Y = 114, Width = 202};
+var labelForAddress = new Label("单元格:") { X = 27, Y = 117, Width = 68, };
+var captionEdit = new TextBox() { X = 101, Y = 75, Width = 202 };
+var labelForCaption = new Label("标  题:") { X = 29, Y = 78, Width = 68, };
+var nameEdit = new DropdownList() { X = 101, Y = 37, Width = 202 };
+var labelForNames = new Label("名  称:") { X = 29, Y = 40, Width = 66, };
+
+dialog.Controls.Add(okBtn);
+dialog.Controls.Add(cancelBtn);
+dialog.Controls.Add(groupBox);
+dialog.Controls.Add(valueEdit);
+dialog.Controls.Add(labelForValue);
+dialog.Controls.Add(addressEdit);
+dialog.Controls.Add(labelForAddress);
+dialog.Controls.Add(captionEdit);
+dialog.Controls.Add(labelForCaption);
+dialog.Controls.Add(nameEdit);
+dialog.Controls.Add(labelForNames);
+
+dialog.ShowDialog();
+```
 
 >Macro Sheets Only
 ###Displays the dialog box described in a dialog box definition table.
@@ -67,10 +98,3 @@ Add 200 to an item number to define it as dimmed. A dimmed (gray) item cannot be
 If a trigger has been chosen and you still want to clear a dynamic dialog box from the screen, use DIALOG.BOX(FALSE). This is useful if you want to confirm that the dialog box has been filled out correctly before dismissing it.
 
 >The dialog box definition table can be an array. If dialog_ref is an array instead of a reference, DIALOG.BOX returns a modified copy of that array, along with the results of the dialog box in the seventh column. (The first item in the seventh column is the position number of the chosen button or >of a triggered item.) This is useful if you want to preserve the original dialog box definition table since DIALOG.BOX does not modify the original array argument. If you cancel the dialog box, or if a dialog box error occurs, DIALOG.BOX returns FALSE instead of an array.
->
->###Related Functions
->
->ALERT	Displays a dialog box and a message
->INPUT	Displays a dialog box for user input
-
->List of Customizing Functions
